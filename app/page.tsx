@@ -21,9 +21,9 @@ const Home = () => {
   const [buttonBgColor5, setButtonBgColor5] = useState("bg-white");
   const [buttonBgColor6, setButtonBgColor6] = useState("bg-white");
 
-  const [activeButton, setActiveButton] = useState<any>("1");
+  const [activeButton, setActiveButton] = useState<string>("1");
 
-  const [timeoutId, setTimeoutId] = useState<any>();
+  const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout>();
 
   const [buttonTextTitle, setButtonTextTitle] = useState("BEM-VINDO!")
   const [buttonTextSubtitle, setButtonTextSubtitle] = useState("Encontre o lar perfeito para realizar seus sonhos. Nossa equipe está pronta para ajudar você em cada passo.");

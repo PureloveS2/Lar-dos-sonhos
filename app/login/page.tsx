@@ -4,8 +4,6 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-const regex = /[a-zA-Z]/;
-
 const Login = () => {
 
   const router = useRouter();
