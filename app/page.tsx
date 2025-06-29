@@ -160,60 +160,58 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col">
       <header className='flex flex-col items-center'>
-        <nav className={`w-full bg-blue-500 text-white flex items-center justify-between px-4 py-2`}>
+        <nav className={`w-full bg-blue-500 text-white flex items-center justify-between px-2 py-2 md:px-4 md:py-2`}>
           <Image
             width={1000}
             height={1000}
             src={"/logo.png"}
             alt='Apartamento'
-            className='w-16'
+            className='w-12 md:w-16'
           />
-          <ul className='flex gap-4 items-center'>
-            <li>
+          <ul className='flex gap-2 md:gap-4 items-center'>
+            <li className='md:block hidden'>
               <Link href={"#footer"} className='font-semibold hover:text-zinc-100 active:text-zinc-200 transition'>Sociais</Link>
             </li>
-            <li>
+            <li className='md:block hidden'>
               <Link href={"#footer"} className='font-semibold hover:text-zinc-100 active:text-zinc-200 transition'>Sobre</Link>
             </li>
-            <li>
+            <li className='md:block hidden'>
               <Link href={"#footer"} className='font-semibold hover:text-zinc-100 active:text-zinc-200 transition'>Contatos</Link>
             </li>
-
-            <li className='hover:scale-105 active:scale-95 transition'>
-              <Link href={"/signup"} className='font-semibold p-2 px-4 border border-blue-800/20 bg-blue-700/50 hover:bg-blue-600/50 rounded-2xl transition'>Criar uma conta</Link>
+            <li className='flex items-center hover:scale-105 active:scale-95 transition'>
+              <Link href={"/signup"} className='font-semibold py-2 text-[12px] md:text-[16px] px-4 border border-blue-800/20 bg-blue-700/50 hover:bg-blue-600/50 rounded-2xl transition'>Criar uma conta</Link>
             </li>
-            <li className='hover:scale-105 active:scale-95 transition'>
-              <Link href={"/login"} className='font-semibold border p-2 px-4 rounded-2xl hover:bg-white/20 transition'>Entrar</Link>
+            <li className='flex items-center hover:scale-105 active:scale-95 transition'>
+              <Link href={"/login"} className='font-semibold border text-[12px] md:text-[16px] py-2 px-4 rounded-2xl hover:bg-white/20 transition'>Entrar</Link>
             </li>
           </ul>
         </nav>
 
         <nav className={`${isFixedHeaderActivated ? "top-4 opacity-100" : "top-[-70] opacity-0"} rounded-2xl transition-all fixed z-20 w-[90%] lg:w-[60%] bg-blue-500/50 backdrop-blur-2xl text-white flex items-center justify-between px-4 py-2`}>
-          <Image
+        <Image
             width={1000}
             height={1000}
             src={"/logo.png"}
             alt='Apartamento'
-            className='w-16'
+            className='w-12 md:w-16'
           />
-          <ul className='flex gap-4 items-center'>
-            <li>
+          <ul className='flex gap-2 md:gap-4 items-center'>
+            <li className='md:block hidden'>
               <Link href={"#footer"} className='font-semibold hover:text-zinc-100 active:text-zinc-200 transition'>Sociais</Link>
             </li>
-            <li>
+            <li className='md:block hidden'>
               <Link href={"#footer"} className='font-semibold hover:text-zinc-100 active:text-zinc-200 transition'>Sobre</Link>
             </li>
-            <li>
+            <li className='md:block hidden'>
               <Link href={"#footer"} className='font-semibold hover:text-zinc-100 active:text-zinc-200 transition'>Contatos</Link>
             </li>
-
-            <li className='hover:scale-105 active:scale-95 transition'>
-              <Link href={"/signup"} className='font-semibold p-2 px-4 border border-blue-800/20 bg-blue-700/50 hover:bg-blue-600/50 rounded-2xl transition'>Criar uma conta</Link>
+            <li className='flex items-center hover:scale-105 active:scale-95 transition'>
+              <Link href={"/signup"} className='font-semibold py-2 text-[12px] md:text-[16px] px-4 border border-blue-800/20 bg-blue-700/50 hover:bg-blue-600/50 rounded-2xl transition'>Criar uma conta</Link>
             </li>
-            <li className='hover:scale-105 active:scale-95 transition'>
-              <Link href={"/login"} className='font-semibold border p-2 px-4 rounded-2xl hover:bg-white/20 transition'>Entrar</Link>
+            <li className='flex items-center hover:scale-105 active:scale-95 transition'>
+              <Link href={"/login"} className='font-semibold border text-[12px] md:text-[16px] py-2 px-4 rounded-2xl hover:bg-white/20 transition'>Entrar</Link>
             </li>
           </ul>
         </nav>
@@ -234,13 +232,9 @@ const Home = () => {
           </div>
 
           <div className='flex w-full justify-end mr-8'>
-            <div className='m-auto w-[30%]'>
-
-            </div>
-
-            <div className='flex items-center w-[50%] gap-4'>
+            <div className='flex items-center w-[90%] md:w-[60%] gap-4'>
               <div className='text-end w-full'>
-                <h2 className={`relative text-3xl lg:text-5xl mb-1 font-bold text-gray-100 ${isAnimationRunning ? "animate-fadein" : ""}`}>{buttonTextTitle}</h2>
+                <h2 className={`relative text-2xl lg:text-5xl mb-1 font-bold text-gray-100 ${isAnimationRunning ? "animate-fadein" : ""}`}>{buttonTextTitle}</h2>
                 <p className={`relative font-semibold lg:text-2xl text-gray-100 ${isAnimationRunning ? "animate-fadein" : ""}`}>
                   {buttonTextSubtitle}
                 </p>
@@ -526,7 +520,7 @@ const Home = () => {
         </section>
       </main>
 
-      <footer id='footer' className="bg-blue-500 text-white p-8 mt-16 justify-around flex">
+      <footer id='footer' className="bg-blue-500 md:gap-0 gap-8 text-white p-8 mt-16 justify-around flex flex-col md:flex-row items-center">
         <section>
           <p className='font-semibold mb-4'>REDES SOCIAIS</p>
           <div className='flex gap-4 justify-center'>
@@ -536,7 +530,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className='w-[40%] text-center'>
+        <section className='w-[40%] text-center hidden md:block'>
           <p className='font-semibold mb-4'>SOBRE NÓS</p>
           <p>No Lar dos Sonhos Imobiliária, sabemos que encontrar o imóvel ideal é mais do que uma transação — é a realização de um sonho. Por isso, desde o nosso primeiro dia, temos o compromisso de oferecer muito mais do que casas e apartamentos: oferecemos lugares onde histórias começam.</p>
         </section>
@@ -550,6 +544,11 @@ const Home = () => {
           <div>
             <small>contato@lardossonhos.com.br</small>
           </div>
+        </section>
+
+        <section className='w-full text-center block md:hidden'>
+          <p className='font-semibold mb-4'>SOBRE NÓS</p>
+          <p>No Lar dos Sonhos Imobiliária, sabemos que encontrar o imóvel ideal é mais do que uma transação — é a realização de um sonho. Por isso, desde o nosso primeiro dia, temos o compromisso de oferecer muito mais do que casas e apartamentos: oferecemos lugares onde histórias começam.</p>
         </section>
       </footer>
     </div>
